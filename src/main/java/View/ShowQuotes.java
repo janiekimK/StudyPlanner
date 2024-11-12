@@ -6,6 +6,8 @@ import javafx.scene.layout.VBox;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
@@ -182,6 +184,11 @@ public class ShowQuotes {
 
                         layout.getChildren().addAll(Zitat, checkout);
 
+                        Text timestampText = new Text(LocalDateTime.now().format(DateTimeFormatter.ofPattern("dd.MM.yyyy HH:mm:ss")));
+                        timestampText.setId("Timestamp");
+
+                        layout.getChildren().add(timestampText);
+
                         stage.setScene(scene);
                         stage.setTitle(i18n.get("StTitleQuotes"));
                         stage.setWidth(800);
@@ -190,6 +197,7 @@ public class ShowQuotes {
                         checkout.setOnAction(action -> stage.close());
 
                         scene.getStylesheets().add(getClass().getResource("Application.css").toExternalForm());
+
 
         }
 
