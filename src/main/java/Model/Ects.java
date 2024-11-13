@@ -6,6 +6,7 @@ import javax.persistence.Column;
 import javax.persistence.Embeddable;
 import javax.persistence.Transient;
 import java.time.Duration;
+import java.time.Instant;
 
 /**
  * This class converts ECTS to minutes.
@@ -95,6 +96,10 @@ public class Ects {
      */
     public String durationTrim(String string) {
         return string.substring(2);
+    }
+    
+    public static Instant getNow() {
+        return Instant.now();
     }
 
     /**

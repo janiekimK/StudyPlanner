@@ -1,3 +1,16 @@
+package View;
+
+import org.junit.jupiter.api.Test;
+
+import javafx.scene.text.Text;
+import javafx.stage.Stage;
+
+import static org.junit.jupiter.api.Assertions.*;
+import static org.mockito.Mockito.*;
+
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+
 class ShowQuotesTest {
     @Test
     void testShowQuotesWithTimestamp() {
