@@ -1,6 +1,11 @@
+package model;
+
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
+
+import Model.Modul;
+
 import static org.mockito.Mockito.when;
 import static org.junit.jupiter.api.Assertions.*;
 import java.util.Arrays;

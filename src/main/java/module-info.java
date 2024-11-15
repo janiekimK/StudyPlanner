@@ -6,6 +6,7 @@ module com.calendarfx.app {
     requires java.persistence;
     requires java.sql;
     requires org.hibernate.orm.core;
+	requires org.junit.jupiter.api;
 
     exports Studyplaner;
     exports DataAccess;
